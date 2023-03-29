@@ -19,8 +19,6 @@ export const postsRouter = createTRPCRouter({
       take: 100,
     });
 
-    console.log(posts);
-
     const users = (
       await clerkClient.users.getUserList({
         userId: posts.map((post) => post.authorId),
